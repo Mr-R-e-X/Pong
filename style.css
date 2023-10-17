@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=PT+Sans:ital@1&display=swap'); */
+*{
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#gameBox{
+    width: 100vw;
+    height: 100vh;
+    background-color: #352424;
+    overflow: hidden;
+    position: absolute;
+}
+#userscore , #aiscore {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    position: absolute;
+    top: 12px;
+}
+#userscore {
+    left: 20%;
+}
+#aiscore {
+    right: 20%;
+}
+
+#userpaddle{
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    box-shadow: inset 0 0 18px #fff,
+        inset -6px 0 18px #f3bad6,
+        inset 6px 0 18px #0ff,
+        inset -6px 0 30px #f3bad6,
+        inset 6px 0 30px #0ff,
+        0 0 18px #fff, 4px 0 18px
+        #f3bad6, -4px 0 18px #0ff;
+    left: 15px;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#aipaddle{
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    box-shadow: inset 0 0 18px #fff,
+        inset -6px 0 18px #f3bad6,
+        inset 6px 0 18px #0ff,
+        inset -6px 0 30px #f3bad6,
+        inset 6px 0 30px #0ff,
+        0 0 18px #fff, 4px 0 18px
+        #f3bad6, -4px 0 18px #0ff;
+    right: 15px;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#ball {
+    /* background-color: #227d8d; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    animation: rotation 0.3s linear infinite ;
+    box-shadow: inset 0 0 18px #f00,
+        inset 6px 0 18px #fe6230,
+        inset -6px 0 18px #fef600,
+        inset 6px 0 30px #00bc00,
+        inset -6px 0 30px #0048fe,
+        0 0 18px #000083, -4px 0 18px
+        violet, 4px 0 18px #30009b;
+}
+@keyframes rotation{
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
